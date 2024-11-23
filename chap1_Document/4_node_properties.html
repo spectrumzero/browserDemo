@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>this is a test.</title>
+</head>
+
+<body>
+  <script>
+    alert(document.body.constructor.name);
+    alert(document.body instanceof HTMLBodyElement); // true
+    alert(document.body instanceof HTMLElement); // true
+    alert(document.body instanceof Element); // true
+    alert(document.body instanceof Node); // true
+    alert(document.body instanceof EventTarget); // true
+    alert(document.body instanceof Object); // true
+
+    let elem = document.body;
+    alert(elem.nodeType); // 1 => element
+    alert(elem.firstChild.nodeType); // 3 => text
+    alert(document.nodeType); // 9
+  </script>
+
+  <p>A paragraph</p>
+  <div>A div</div>
+
+  <script>
+    alert(document.body.innerHTML);
+    alert(document.body.outerHTML);
+    document.body.innerHTML = "The new BODY!";
+  </script>
+</body>
